@@ -208,3 +208,7 @@ img {
   background: red;
 
 }
+
+.clear {
+  clear: both;
+}
