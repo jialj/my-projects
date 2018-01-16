@@ -46,18 +46,19 @@ var a = 30 + null;
 
    function foo() {console.log(3);};
    console.log(typeof foo,foo);*/
-   var parent = function () {
+/*   var parent = function () {
     var len = 9;
 
 for (var i =0; i < len; i++) {
-	/*window.onload = function() {
+	window.onload = function() {
 		console.log(i);  // 全都为9
-}*/
+}
      var x = function(){
      	console.log(i);
      }();
 
 }
 };
-parent();
+parent();*/
+what();
 
