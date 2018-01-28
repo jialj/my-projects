@@ -32,5 +32,28 @@
   margin-left: -200px;
   background: blue;
 }
-body {}
+/*ul {
+  width: 100px;
+  height: 100px;
+  border: 1px solid red;
+}*/
+li {
+  list-style: none;
+  width: 100px;
+  height: 100px;
+  border: 1px solid red;
+}
+ul {
+  position: relative;
+}
+li span{
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border: 1px solid blue;
+  position: relative;
+}
+li {
+  position: relative;
+}
 
