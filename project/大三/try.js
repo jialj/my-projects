@@ -70,20 +70,22 @@ parent();*/
    /* var ul = document.getElementsByTagName("ul")[0];
     var li = document.getElementsByTagName("li")[0];
     console.log($("img")[0].src);*/
-  /*  var aa = {
-      a : [1,2],
-      b : function() {
-        var c = this.a[0];
-        c = 2;
-        console.log(c,this.a);
-      }
-    };
-    aa.b();*/
-    $("ul").find("span");
-    var index = 0;
-    var str = "li:eq(" + index + ")";
-    console.log($("ul").find(str)[0].innerHTML);
+/*    $(".twl p:nth-of-type(3)").css({
+  "width": "100px",
+  "height": "100px",
+  "background": "blue"
+});*/
+
+
+var obj1 = {name:"rock",age:20,sex:"man"};
+var obj2 = {name:"twl",age:[1,2]};
+var obj3 = $.extend(obj1,obj2);
+console.log(obj1,obj2,obj3);
+obj1.name = "rock";
+console.log(obj2.name);
+
     
+
   })();
 
 
