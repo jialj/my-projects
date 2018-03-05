@@ -5,62 +5,56 @@
     <meta charset="utf-8">
     <!-- SEO优化 -->
     <title>Style Guide</title>         <!-- title标签放在charset之后 -->
-    <link rel="stylesheet" href="bootstrap-3.3.5/dist/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="try.css">
-
   </head>
   
   <body>
 
-<!--    <input type="text" value="password">
-   <div><ul>
-     <li><span></span>?????<span></span></li>
-     <li><span></span><span></span></li>
-     <li><span></span><span></span></li>
-   </ul></div>
-   <div class="twl">
-     <p>1</p>
-     <p>2</p>
-     <p>3</p>
-   </div>
-   <div class="twl">
-     <div>0</div>
-     <p>1</p>
-     <p>2</p>
-     <p>3</p>
-   </div>
-   <div class="twl2">sdadads</div> -->
-     <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-1">col-sm-4</div>
-        <div class="col-sm-4">col-sm-4</div>
-        <div class="col-sm-4">col-sm-4</div>
-    </div>
-        <div class="row">
-      <div class="col-lg-4">col-lg-4</div>
-        <div class="col-lg-4">col-lg-4</div>
-        <div class="col-lg-4">col-lg-4</div>
-    </div>
-    </div>
-
-
-<div class="container">
-    <div class="row">
-        <div class="col-lg-2 col-lg-offset-1">1</div>
-         <div class="col-lg-10">2</div>
-    </div>
-</div>
-<input type="button" value="按钮">
-<input class="btn-primary" type="button" value="按钮">
-<input class="btn-success" type="button" value="按钮">
-<input class="btn-info" type="button" value="按钮">
-<input class="btn-warning" type="button" value="按钮">
-<input class="btn-danger" type="button" value="按钮">
-
+    <ul class="demo">
+      <li v-for="item in list" @click="addTodo('123',$event)">
+        {{item.title}}
+      </li>
+      <input type="text" v-on:keyup.enter="addTodo" v-model="todo" placeholder="？？？？？？？">
+    </ul>
+    
 
     <script src="jquery-3.1.1.js"></script>
-    <script src="bootstrap-3.3.5/dist/js/bootstrap.min.js"></script>
-   <script src="try.js"></script>
+    <!-- <script src="bootstrap-3.3.5/dist/js/bootstrap.min.js"></script> -->
+    <script src="vue.js"></script>
+    <script src="try.js"></script>
+    <script>
+      // 数据
+      var dataList = [
+  {
+    title:"吃饭打豆豆",
+    isChecked:false //状态为false，为不选中  任务未完成
+  },
+  {
+    title:"妙味课堂",
+    isChecked:true   //状态为true，为选中    任务完成
+  }
+];
+      // Vm实例
+      var vm = new Vue({
+        el: ".demo", // 挂载元素
+        data: {
+          list: dataList,
+          todo: ""
+        },
+        methods: {
+          addTodo(ev,ev2) {
+            console.log(ev,ev2);
+            this.list.push({
+              title: this.todo
+            });
+            this.todo = "";
+            console.log("1",this.todo);
+          }
+        }
+      });
+    </script>
+
   </body>
   
   </html>

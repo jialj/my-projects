@@ -75,14 +75,13 @@ parent();*/
   "height": "100px",
   "background": "blue"
 });*/
-
-
-var obj1 = {name:"rock",age:20,sex:"man"};
-var obj2 = {name:"twl",age:[1,2]};
-var obj3 = $.extend(obj1,obj2);
-console.log(obj1,obj2,obj3);
-obj1.name = "rock";
-console.log(obj2.name);
+    var html = $("html"),
+        // 下面这个fontSize即rem的宽度
+        // 由于是除以的16即代表16个1rem就占满整个屏幕
+        // 要在css中用的时候，就用元素的宽度除以1个rem的值，就是比例了
+        fontSize = html.width()/16 + "px";
+    html.css("fontSize",fontSize);
+    console.log(fontSize);
 
     
 
