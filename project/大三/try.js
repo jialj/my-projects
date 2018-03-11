@@ -82,7 +82,15 @@ parent();*/
         fontSize = html.width()/16 + "px";
     html.css("fontSize",fontSize);
     console.log(fontSize);
+    
+    var canvas = $('canvas')[0];
+    var context = canvas.getContext("2d"); // (1)
 
+context.beginPath(); // 开始创建一条新路径
+context.moveTo(70, 140); // 表示绘图游标移动到目标位置，不画线。
+context.lineTo(140, 70); // 表示将游标从当前点移动到目标点，在两点之间画一条直线。
+
+context.stroke(); // 描边，把路径画到canvas上
     
 
   })();

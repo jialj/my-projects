@@ -4,5 +4,10 @@ body {
   margin-top: 150px;
 }
 
-
+canvas {
+  width: 500px;
+  height: 500px;
+  border: 1px solid red;
+  margin: 0 auto;
+}
 

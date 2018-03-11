@@ -17,6 +17,7 @@
       </li>
       <input type="text" v-on:keyup.enter="addTodo" v-model="todo" placeholder="？？？？？？？">
     </ul>
+    <canvas></canvas>
     
 
     <script src="jquery-3.1.1.js"></script>
@@ -24,35 +25,11 @@
     <script src="vue.js"></script>
     <script src="try.js"></script>
     <script>
-      // 数据
-      var dataList = [
-  {
-    title:"吃饭打豆豆",
-    isChecked:false //状态为false，为不选中  任务未完成
-  },
-  {
-    title:"妙味课堂",
-    isChecked:true   //状态为true，为选中    任务完成
-  }
-];
-      // Vm实例
-      var vm = new Vue({
-        el: ".demo", // 挂载元素
-        data: {
-          list: dataList,
-          todo: ""
-        },
-        methods: {
-          addTodo(ev,ev2) {
-            console.log(ev,ev2);
-            this.list.push({
-              title: this.todo
-            });
-            this.todo = "";
-            console.log("1",this.todo);
-          }
-        }
-      });
+        var str = '{q:"undefined",p:false,s:["undefined是什么意思","undefined reference to","undefined symbol","undefined control sequence","js undefined判断","undefined reference to vtable for","undefined is not a function","undefined is not an object evaluating","undefined js","undefined is not an object"]}';
+        //var reg = new RegExp("(?<=^ab).+(?=ef$)","g");
+        //var str = 'twl(dsa)';
+        
+        console.log(typeof JSON.parse(str),JSON.parse(str));
     </script>
 
   </body>

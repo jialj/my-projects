@@ -1,0 +1,14 @@
+{
+  "pages":[
+    
+    "pages/search/search",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "搜个Hammer",
+    "navigationBarTextStyle":"black"
+  }
+}
