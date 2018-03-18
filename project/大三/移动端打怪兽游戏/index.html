@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+    <head>
+      <meta charset="utf-8">
+      <title>模块化布局页面</title> 
+      <meta name="viewport" content="width=device-width, user-scalable=no">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <link rel="stylesheet" href="style/index.css">
+    </head>
+
+    <body>
+      <section class='bg-snow'></section>
+      <section class='content'>
+        <p class='intro'>{{intro}}</p>
+        <section class="rocket"></section>
+        <section class="word"></section>
+      	<section class="arrow"></section>
+      	<section class="music" :class="play ? 'music-play' : 'music-pause'" @click="changeState">
+      		<!-- <audio src="白羊.mp3" autoplay></audio> -->
+      	</section>
+      </section>
+
+
+      <script src='jquery-1.9.1.js'></script>
+      <script src='vue.js'></script>
+      <script src='sea.js'></script>
+      <script src='script/index.js'></script>
+    </body>
+
+</html>

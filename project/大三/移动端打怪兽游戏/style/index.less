@@ -1,0 +1,134 @@
+// 根据设计图，先将html设计为640,root设置为40,由于less变量后面不能加字母了，所以在定义的时候直接加上rem
+@root: 60rem;
+
+@keyframes snowflake {
+	0% {
+		background-position: 0 0,0 0;
+	}
+	100% {
+		background-position: 500/@root 500/@root,1500/@root 1500/@root;
+	}
+}
+
+@keyframes arrow {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(-150/@root);
+	}
+}
+
+@keyframes rocket {
+	0% {
+		opacity: 0;
+		left: -166/@root;
+	    top: 521/@root;
+	}
+	100% {
+		opacity: 1;
+		left: 153/@root;
+	    top: 321/@root;
+	}
+}
+
+@keyframes word {
+	0% {
+		opacity: 0;
+	    left: 143/@root;
+	    top: 700/@root;
+	}
+	100% {
+		opacity: 1;
+	    left: 143/@root;
+	    top: 394/@root;
+	}
+}
+
+@keyframes music {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+body {
+	position: relative;
+	margin: 0 auto;
+	background: #2d4081;
+	background: -webkit-radial-gradient(50% 50%,closest-side,#1d2952 40%,#293e85 65%,#2b438f 80%,#2c3f7e) no-repeat;
+}
+
+.bg-snow {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url('../img/snow1.png'),url('../img/snow2.png');
+	background-size: contain;
+	animation: 10s snowflake linear infinite;
+	pointer-events: none;
+}
+
+.rocket {
+	position: fixed;
+	left: 153/@root;
+	top: 321/@root;
+	width: 166/@root;
+	height: 193/@root;
+	background: url('../img/sprite.png') no-repeat;
+	background-size: 393/@root 650/@root;
+	animation: 1s rocket ease-in 1;
+}
+
+.word {
+	position: fixed;
+	left: 143/@root;
+	top: 394/@root;
+	width: 393/@root;
+	height: 296/@root;
+	background: url('../img/sprite.png') no-repeat 0 -196/@root;
+	background-size: 393/@root 650/@root;
+	animation: 1s word ease-in 1;
+}
+
+.arrow {
+	position: fixed;
+	left: 274/@root;
+	bottom: 41/@root;
+	width: 91/@root;
+	height: 65/@root;
+	background: url('../img/sprite.png') no-repeat 0 -492/@root;
+	background-size: 393/@root 650/@root;
+	animation: 2s arrow ease-in infinite;
+}
+
+.music {
+	position: fixed;
+	right: 20/@root;
+	bottom: 41/@root;
+	width: 50/@root;
+	height: 47/@root;
+	background: url('../img/sprite.png') no-repeat;
+	background-size: 393/@root 650/@root;
+	transition: 1s;
+}
+
+.music-play {
+	background-position: 0 -557/@root;
+	animation: 5s music linear infinite;
+}
+
+.music-pause {
+	background-position: 0 -603/@root;
+}
+
+.intro {
+	transform: rotateX(40deg);
+	text-shadow: 0 0 2px #627908;
+	color: gray;
+}
